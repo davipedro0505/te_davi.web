@@ -14,16 +14,24 @@
        {{#each pessoas}}
 
     <li> 
-        
-        <a href="/pessoas/{{id}}">
-        
-        {{nome}}
-        </a>
-      
+        <a href="/pessoas/{{id}}">{{nome}}</a>
+
+        <a href="/pessoas/{{id}}/editar">Editar </a>
+
+        <form action="/pessoas/{{id}}/excluir"
+              method="post"
+              style="display: inline;">
+        <button type="submit"
+                onclick="return confirm('Confirma exclusão?')" >Deletar</button>
+        </form>
     </li>
 
        {{/each}}
+
     </ul>
+
+        <a href="/">Voltar</a>
+
     
 </body>
 </html>
